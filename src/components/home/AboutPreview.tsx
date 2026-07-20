@@ -22,9 +22,9 @@ export function AboutPreview() {
         backgroundImage: `url(${IMAGES.thailandBoatLounge})`,
         backgroundBlendMode: 'multiply'
       }}>
-      <div className="absolute inset-0 bg-charcoal/80 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-transparent to-charcoal/80 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-charcoal/90 pointer-events-none" />
+      <div className="absolute inset-0 bg-charcoal/60 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-transparent to-charcoal/60 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-charcoal/70 pointer-events-none" />
       <div className="mx-auto relative max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         <div className="relative">
           <motion.div
@@ -38,7 +38,7 @@ export function AboutPreview() {
               alt="Couple sharing an intimate moment on a longtail boat"
               loading="lazy"
               wrapperClassName="w-full"
-              className="w-full aspect-[4/5] object-cover" />
+              className="w-full aspect-[4/5] object-cover saturate-125 contrast-[1.05] brightness-[1.05]" />
 
             {/* Blend image edges into the charcoal section */}
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-charcoal via-transparent to-charcoal/80" />
