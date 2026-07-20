@@ -65,7 +65,7 @@ export function Portfolio() {
   return (
     <main>
       <PageHero
-        image={IMAGES.echoesSea}
+        image={IMAGES.garlandCouple}
         eyebrow="Portfolio"
         title="A Gallery of Timeless Moments"
         subtitle="Explore our finest work across weddings, engagements and cinematic films." />

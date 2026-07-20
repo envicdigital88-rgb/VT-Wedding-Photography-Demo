@@ -25,10 +25,11 @@ export function PageHero({ image, eyebrow, title, subtitle }: PageHeroProps) {
         initial={{ scale: 1.15 }}
         animate={{ scale: 1 }}
         transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-0 w-full h-full object-cover" />
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        style={{ objectPosition: 'center 35%' }} />
       
-      <div className="absolute inset-0 bg-charcoal/70" />
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/20 to-charcoal/60" />
+      <div className="absolute inset-0 bg-charcoal/35" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/10 to-charcoal/30" />
 
       <div className="relative z-10 text-center px-5">
         <motion.div

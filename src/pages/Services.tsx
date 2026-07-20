@@ -22,7 +22,7 @@ export function Services() {
   return (
     <main>
       <PageHero
-        image={IMAGES.garlandCouple}
+        image={IMAGES.beachWalkHands}
         eyebrow="Services"
         title="Tailored to Your Story"
         subtitle="Every wedding is unique — our services are crafted to capture every meaningful moment." />

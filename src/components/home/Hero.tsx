@@ -35,7 +35,8 @@ export function Hero() {
           initial={{ scale: 1.2, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full h-full object-cover" />
+          className="w-full h-full object-cover object-center"
+          style={{ objectPosition: 'center 60%' }} />
         
       </div>
 
