@@ -30,8 +30,8 @@ export function Hero() {
         style={{ transform: `translateY(${offset * 0.4}px) scale(1.1)` }}>
         
         <motion.img
-          src={IMAGES.garlandCouple}
-          alt="A wedding couple posing with floral garlands at sunset"
+          src={IMAGES.beachLift}
+          alt="Couple embracing on a boat at the beach"
           initial={{ scale: 1.2, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}

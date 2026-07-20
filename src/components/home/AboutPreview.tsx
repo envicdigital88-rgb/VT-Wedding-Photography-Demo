@@ -16,15 +16,23 @@ import { IMAGES } from '../../data/images';
 
 export function AboutPreview() {
   return (
-    <section className="relative bg-charcoal py-24 md:py-32 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+    <section
+      className="relative overflow-hidden py-24 md:py-32 bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${IMAGES.thailandBoatLounge})`,
+        backgroundBlendMode: 'multiply'
+      }}>
+      <div className="absolute inset-0 bg-charcoal/80 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-transparent to-charcoal/80 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-charcoal/90 pointer-events-none" />
+      <div className="mx-auto relative max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         <div className="relative">
           <motion.div
             initial={{ clipPath: 'inset(0 0 100% 0)' }}
             whileInView={{ clipPath: 'inset(0 0 0% 0)' }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative overflow-hidden">
+            className="relative overflow-hidden rounded-[1.25rem] shadow-2xl shadow-black/20">
             <ColorRevealImage
               src={IMAGES.thailandBoatLounge}
               alt="Couple sharing an intimate moment on a longtail boat"
@@ -38,12 +46,6 @@ export function AboutPreview() {
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-charcoal/40 via-transparent to-transparent" />
           </motion.div>
           <div className="absolute -bottom-6 -right-4 sm:-right-6 w-40 h-52 sm:w-48 sm:h-60 border border-champagne/30 hidden sm:block" />
-          <div className="absolute -top-5 -left-4 glass px-5 py-3 hidden md:block animate-float">
-            <span className="font-display text-2xl text-champagne">8+</span>
-            <span className="ml-2 text-[10px] uppercase tracking-[0.2em] text-warmwhite/60">
-              Years
-            </span>
-          </div>
         </div>
 
         <div>
