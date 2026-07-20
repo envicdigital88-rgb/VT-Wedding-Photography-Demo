@@ -79,7 +79,7 @@ export function Portfolio() {
             <button
               key={f.key}
               onClick={() => setFilter(f.key)}
-              className={`relative px-5 py-2.5 text-[11px] uppercase tracking-[0.22em] font-sans transition-colors duration-400 ${
+              className={`relative overflow-hidden rounded-full border border-white/10 px-6 py-2.5 text-[11px] uppercase tracking-[0.22em] font-sans transition-colors duration-300 ${
               filter === f.key ?
               'text-charcoal' :
               'text-warmwhite/60 hover:text-warmwhite'}`

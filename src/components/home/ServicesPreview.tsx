@@ -43,15 +43,15 @@ export function ServicesPreview() {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.8, delay: i % 3 * 0.1, ease: [0.16, 1, 0.3, 1] }}>
             
-              <Link to="/services" className="group block relative overflow-hidden aspect-[4/5]">
+              <Link to="/services" className="group block relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-charcoal/10 aspect-[4/5] shadow-[0_28px_90px_rgba(0,0,0,0.18)] transition-transform duration-500 hover:-translate-y-1 hover:border-champagne/20">
                 <ColorRevealImage
                 src={s.image}
                 alt={s.title}
                 loading="lazy"
                 wrapperClassName="absolute inset-0 transition-transform duration-[1.4s] ease-luxe group-hover:scale-110"
-                className="w-full h-full object-cover" />
+                className="w-full h-full object-cover rounded-[2.25rem]" />
               
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/30 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 rounded-[2.25rem] bg-gradient-to-t from-charcoal/95 via-charcoal/30 to-transparent pointer-events-none" />
                 <div className="absolute inset-x-0 bottom-0 p-7 pointer-events-none">
                   <h3 className="font-display text-2xl text-warmwhite">{s.title}</h3>
                   <p className="mt-2 text-sm font-sans font-light text-warmwhite/60 max-h-0 opacity-0 overflow-hidden group-hover:max-h-24 group-hover:opacity-100 transition-all duration-500 ease-luxe">
