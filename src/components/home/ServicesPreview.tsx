@@ -1,0 +1,75 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRightIcon } from 'lucide-react';
+import { SectionHeading } from '../ui/SectionHeading';
+import { LinkButton } from '../ui/Button';
+import { SERVICES } from '../../data/services';
+
+export function ServicesPreview() {
+  const items = SERVICES.slice(0, 6);
+  return (
+    <section className="bg-ink py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <SectionHeading
+          eyebrow="What We Offer"
+          title="Services Crafted Around You"
+          description="From intimate engagements to grand celebrations, every service is tailored to your story." />
+        
+
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {items.map((s, i) =>
+          <motion.div
+            key={s.title}
+            initial={{ opacity: 0, y: 36 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.8, delay: i % 3 * 0.1, ease: [0.16, 1, 0.3, 1] }}>
+            
+              <Link to="/services" className="group block relative overflow-hidden aspect-[4/5]">
+                <img
+                src={s.image}
+                alt={s.title}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.4s] ease-luxe group-hover:scale-110" />
+              
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-7">
+                  <h3 className="font-display text-2xl text-warmwhite">{s.title}</h3>
+                  <p className="mt-2 text-sm font-sans font-light text-warmwhite/60 max-h-0 opacity-0 overflow-hidden group-hover:max-h-24 group-hover:opacity-100 transition-all duration-500 ease-luxe">
+                    {s.short}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.24em] text-champagne">
+                    Explore <ArrowRightIcon className="w-4 h-4" />
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
+          )}
+        </div>
+
+        <div className="mt-14 text-center">
+          <LinkButton to="/services" variant="outline">
+            View All Services
+          </LinkButton>
+        </div>
+      </div>
+    </section>);
+
+}
