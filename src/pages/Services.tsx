@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 import { ArrowRightIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PageHero } from '../components/ui/PageHero';
-import { Reveal } from '../components/ui/Reveal';
+import { Reveal, TextReveal } from '../components/ui/Reveal';
 import { FinalCTA } from '../components/home/FinalCTA';
 import { ColorRevealImage } from '../components/ui/ColorRevealImage';
 import { SERVICES } from '../data/services';
@@ -62,21 +62,28 @@ export function Services() {
                   
                 </div>
                 <div className="flex flex-col justify-center p-9 md:p-14">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-champagne/60 font-sans">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <h2 className="mt-4 font-display text-3xl md:text-4xl text-warmwhite">
-                    {s.title}
-                  </h2>
-                  <p className="mt-5 text-warmwhite/60 font-sans font-light leading-relaxed">
-                    {s.description}
-                  </p>
-                  <Link
-                    to="/contact"
-                    className="mt-8 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.24em] text-champagne hover:gap-4 transition-all duration-400">
-                    
-                    Learn More <ArrowRightIcon className="w-4 h-4" />
-                  </Link>
+                  <Reveal delay={0.1}>
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-champagne/60 font-sans">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                  </Reveal>
+                  <Reveal delay={0.15}>
+                    <h2 className="mt-4 font-display text-3xl md:text-4xl text-warmwhite">
+                      <TextReveal text={s.title} />
+                    </h2>
+                  </Reveal>
+                  <Reveal delay={0.2}>
+                    <p className="mt-5 text-warmwhite/60 font-sans font-light leading-relaxed">
+                      {s.description}
+                    </p>
+                  </Reveal>
+                  <Reveal delay={0.25}>
+                    <Link
+                      to="/contact"
+                      className="mt-8 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.24em] text-champagne hover:gap-4 transition-all duration-400">
+                      Learn More <ArrowRightIcon className="w-4 h-4" />
+                    </Link>
+                  </Reveal>
                 </div>
               </motion.article>);
 

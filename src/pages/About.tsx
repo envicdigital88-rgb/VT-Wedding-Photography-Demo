@@ -126,11 +126,12 @@ export function About() {
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              whileHover={{ scale: 1.03, y: -8 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="overflow-hidden">
+              className="overflow-hidden rounded-[1.25rem] shadow-2xl shadow-black/20">
               <ColorRevealImage
                 src={IMAGES.thailandBoatCollage1}
                 alt="Romantic pre-shoot on a longtail boat in Thailand"
@@ -139,11 +140,12 @@ export function About() {
                 className="w-full aspect-[3/4] object-cover object-top" />
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              whileHover={{ scale: 1.03, y: -8 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="overflow-hidden">
+              className="overflow-hidden rounded-[1.25rem] shadow-2xl shadow-black/20">
               <ColorRevealImage
                 src={IMAGES.thailandBoatCollage2}
                 alt="Intimate couple moments aboard a wooden boat"
