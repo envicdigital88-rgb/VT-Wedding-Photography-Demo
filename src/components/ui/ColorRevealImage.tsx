@@ -62,7 +62,7 @@ export function ColorRevealImage({
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden ${wrapperClassName}`}
+      className={`relative overflow-hidden rounded-[1.75rem] ${wrapperClassName}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleLeave}
       onTouchStart={handleTouchMove}
@@ -73,7 +73,7 @@ export function ColorRevealImage({
         src={src}
         alt={alt}
         loading={loading}
-        className={`${className} grayscale`}
+        className={`${className} grayscale rounded-[1.5rem]`}
         {...imgProps}
       />
       <img

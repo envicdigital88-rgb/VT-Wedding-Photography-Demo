@@ -88,15 +88,13 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               to="/contact"
-              className="hidden sm:inline-flex items-center px-6 py-3 text-[11px] uppercase tracking-[0.24em] font-sans font-medium bg-champagne text-charcoal hover:bg-warmwhite transition-colors duration-500">
-              
+              className="hidden sm:inline-flex items-center gap-2 px-7 py-3 rounded-full text-[11px] uppercase tracking-[0.24em] font-sans font-semibold bg-gradient-to-r from-champagne via-[#f7d893] to-champagne text-charcoal shadow-[0_15px_35px_rgba(218,187,108,0.16)] hover:shadow-[0_18px_44px_rgba(218,187,108,0.25)] transition-all duration-500">
               Reserve Now
             </Link>
             <button
               onClick={() => setOpen(true)}
               className="lg:hidden text-warmwhite p-1"
               aria-label="Open menu">
-              
               <MenuIcon className="w-6 h-6" />
             </button>
           </div>
@@ -148,8 +146,7 @@ export function Navbar() {
               
                 <Link
                 to="/contact"
-                className="inline-flex px-9 py-4 text-xs uppercase tracking-[0.24em] font-sans bg-champagne text-charcoal">
-                
+                className="inline-flex px-9 py-4 rounded-full text-xs uppercase tracking-[0.24em] font-sans font-semibold bg-gradient-to-r from-champagne via-[#f7d893] to-champagne text-charcoal shadow-[0_12px_30px_rgba(218,187,108,0.18)] hover:shadow-[0_14px_36px_rgba(218,187,108,0.26)] transition-all duration-500">
                   Reserve Your Date
                 </Link>
               </motion.li>

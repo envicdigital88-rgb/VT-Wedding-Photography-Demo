@@ -14,13 +14,13 @@ interface CommonProps {
 }
 
 const base =
-'group relative inline-flex items-center justify-center gap-2 px-8 py-3.5 text-[11px] font-sans font-medium uppercase tracking-[0.28em] transition-all duration-500 ease-luxe overflow-hidden';
+'group relative inline-flex items-center justify-center gap-2 px-9 py-3.5 rounded-full text-[11px] font-sans font-semibold uppercase tracking-[0.24em] transition-all duration-500 ease-luxe overflow-hidden ring-1 ring-white/10';
 
 const variants: Record<Variant, string> = {
   solid:
-  'bg-champagne text-charcoal hover:bg-warmwhite',
+  'bg-gradient-to-r from-champagne via-[#f7d893] to-champagne text-charcoal shadow-[0_16px_48px_rgba(218,187,108,0.18)] hover:shadow-[0_20px_60px_rgba(218,187,108,0.24)]',
   outline:
-  'border border-white/25 text-warmwhite hover:border-champagne hover:text-champagne',
+  'border border-white/20 bg-white/5 text-warmwhite hover:border-champagne hover:text-champagne hover:bg-white/15',
   ghost: 'text-warmwhite/80 hover:text-champagne'
 };
 
