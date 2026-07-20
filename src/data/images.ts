@@ -40,7 +40,15 @@ export const IMAGES = {
 
   gardenWalk: "/WhatsApp_Image_2026-07-20_at_11.17.34.jpg",
 
-  garlandCouple: "/WhatsApp_Image_2026-07-20_at_11.17.33.jpg"
+  garlandCouple: "/WhatsApp_Image_2026-07-20_at_11.17.33.jpg",
+
+  thailandBoatLounge: "/1784529739933.publer.com.jpg",
+
+  thailandBoatCollage1: "/1784529740927.publer.com.jpg",
+
+  thailandBoatCollage2: "/1784529741928.publer.com.jpg",
+
+  thailandBoatCanyon: "/1784529742928.publer.com.jpg"
 
 } as const;
 
@@ -61,6 +69,10 @@ export const GALLERY_IMAGES: GalleryImage[] = [
 { src: IMAGES.echoesSea, alt: 'Echoes of the sea pre-shoot', category: 'preshoots', orientation: 'portrait' },
 { src: IMAGES.chaseTide, alt: 'Chase the tide pre-shoot', category: 'preshoots', orientation: 'portrait' },
 { src: IMAGES.beachWalkHands, alt: 'Couple walking along the water', category: 'preshoots', orientation: 'portrait' },
+{ src: IMAGES.thailandBoatLounge, alt: 'Romantic pre-shoot on a longtail boat', category: 'preshoots', orientation: 'portrait' },
+{ src: IMAGES.thailandBoatCollage1, alt: 'Couple on a boat in tropical waters', category: 'preshoots', orientation: 'portrait' },
+{ src: IMAGES.thailandBoatCollage2, alt: 'Intimate moments aboard a wooden boat', category: 'preshoots', orientation: 'portrait' },
+{ src: IMAGES.thailandBoatCanyon, alt: 'Boat journey through limestone cliffs', category: 'preshoots', orientation: 'portrait' },
 
 { src: IMAGES.beachSilhouette, alt: 'Sunset beach silhouette', category: 'films', orientation: 'landscape' },
 { src: IMAGES.beachLift, alt: 'Backlit beach embrace', category: 'films', orientation: 'landscape' }];

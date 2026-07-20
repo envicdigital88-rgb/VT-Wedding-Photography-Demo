@@ -65,7 +65,7 @@ export function Contact() {
   return (
     <main>
       <PageHero
-        image={IMAGES.beachLaugh}
+        image={IMAGES.beachKiss}
         eyebrow="Contact"
         title="Reserve Your Wedding Date"
         subtitle="We would love to hear about your special day and how we can create unforgettable memories together." />

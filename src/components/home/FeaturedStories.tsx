@@ -14,6 +14,7 @@ import { motion } from 'framer-motion';
 import { ArrowUpRightIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SectionHeading } from '../ui/SectionHeading';
+import { ColorRevealImage } from '../ui/ColorRevealImage';
 import { IMAGES } from '../../data/images';
 
 const STORIES = [
@@ -43,15 +44,16 @@ export function FeaturedStories() {
             
               <Link to="/portfolio" className="group block relative overflow-hidden">
                 <div className="overflow-hidden aspect-[3/4]">
-                  <img
+                  <ColorRevealImage
                   src={s.image}
                   alt={`${s.couple} wedding at ${s.venue}`}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-[1.4s] ease-luxe group-hover:scale-110" />
+                  wrapperClassName="w-full h-full transition-transform duration-[1.4s] ease-luxe group-hover:scale-110"
+                  className="w-full h-full object-cover" />
                 
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/10 to-transparent opacity-90" />
-                <div className="absolute inset-x-0 bottom-0 p-7">
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/10 to-transparent opacity-90 pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 p-7 pointer-events-none">
                   <div className="translate-y-2 group-hover:translate-y-0 transition-transform duration-500 ease-luxe">
                     <span className="text-[10px] uppercase tracking-[0.28em] text-champagne font-sans">
                       {s.venue}

@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom';
 import { PageHero } from '../components/ui/PageHero';
 import { Reveal } from '../components/ui/Reveal';
 import { FinalCTA } from '../components/home/FinalCTA';
+import { ColorRevealImage } from '../components/ui/ColorRevealImage';
 import { SERVICES } from '../data/services';
 import { IMAGES } from '../data/images';
 
@@ -21,7 +22,7 @@ export function Services() {
   return (
     <main>
       <PageHero
-        image={IMAGES.ceremonyGold}
+        image={IMAGES.garlandCouple}
         eyebrow="Services"
         title="Tailored to Your Story"
         subtitle="Every wedding is unique — our services are crafted to capture every meaningful moment." />
@@ -52,11 +53,12 @@ export function Services() {
                 className="group grid md:grid-cols-2 border border-white/10 overflow-hidden hover:border-champagne/40 transition-colors duration-500">
                 
                 <div className={`overflow-hidden aspect-[4/3] md:aspect-auto ${reversed ? 'md:order-2' : ''}`}>
-                  <img
+                  <ColorRevealImage
                     src={s.image}
                     alt={s.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-[1.5s] ease-luxe group-hover:scale-105" />
+                    wrapperClassName="w-full h-full transition-transform duration-[1.5s] ease-luxe group-hover:scale-105"
+                    className="w-full h-full object-cover" />
                   
                 </div>
                 <div className="flex flex-col justify-center p-9 md:p-14">

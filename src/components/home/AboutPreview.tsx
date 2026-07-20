@@ -11,11 +11,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Reveal, TextReveal } from '../ui/Reveal';
 import { LinkButton } from '../ui/Button';
+import { ColorRevealImage } from '../ui/ColorRevealImage';
 import { IMAGES } from '../../data/images';
 
 export function AboutPreview() {
   return (
-    <section className="bg-charcoal py-24 md:py-32">
+    <section className="relative bg-charcoal py-24 md:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         <div className="relative">
           <motion.div
@@ -23,14 +24,18 @@ export function AboutPreview() {
             whileInView={{ clipPath: 'inset(0 0 0% 0)' }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden">
-            
-            <img
-              src={IMAGES.hennaHands}
-              alt="Close detail of a bride's henna-adorned hands"
+            className="relative overflow-hidden">
+            <ColorRevealImage
+              src={IMAGES.thailandBoatLounge}
+              alt="Couple sharing an intimate moment on a longtail boat"
               loading="lazy"
+              wrapperClassName="w-full"
               className="w-full aspect-[4/5] object-cover" />
-            
+
+            {/* Blend image edges into the charcoal section */}
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-charcoal via-transparent to-charcoal/80" />
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-charcoal via-charcoal/20 to-transparent" />
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-charcoal/40 via-transparent to-transparent" />
           </motion.div>
           <div className="absolute -bottom-6 -right-4 sm:-right-6 w-40 h-52 sm:w-48 sm:h-60 border border-champagne/30 hidden sm:block" />
           <div className="absolute -top-5 -left-4 glass px-5 py-3 hidden md:block animate-float">
@@ -70,5 +75,4 @@ export function AboutPreview() {
         </div>
       </div>
     </section>);
-
 }

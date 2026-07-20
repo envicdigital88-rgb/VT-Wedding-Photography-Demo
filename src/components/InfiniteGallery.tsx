@@ -3,6 +3,7 @@
 import type React from 'react';
 import { useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { ColorRevealImage } from './ui/ColorRevealImage';
 
 type ImageItem = string | {src: string;alt?: string;};
 
@@ -55,11 +56,13 @@ export function InfiniteGallery({
             key={`${img.src}-${i}`}
             className="group relative h-full aspect-[3/4] shrink-0 overflow-hidden">
             
-              <img
+              <ColorRevealImage
               src={img.src}
               alt={img.alt}
               loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-[1.4s] ease-luxe group-hover:scale-110" />
+              revealRadius={110}
+              wrapperClassName="w-full h-full transition-transform duration-[1.4s] ease-luxe group-hover:scale-110"
+              className="w-full h-full object-cover" />
             
               <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/30 transition-colors duration-500" />
             </div>

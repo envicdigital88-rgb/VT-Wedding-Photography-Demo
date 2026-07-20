@@ -20,6 +20,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRightIcon } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { LinkButton } from '../ui/Button';
+import { ColorRevealImage } from '../ui/ColorRevealImage';
 import { SERVICES } from '../../data/services';
 
 export function ServicesPreview() {
@@ -43,14 +44,15 @@ export function ServicesPreview() {
             transition={{ duration: 0.8, delay: i % 3 * 0.1, ease: [0.16, 1, 0.3, 1] }}>
             
               <Link to="/services" className="group block relative overflow-hidden aspect-[4/5]">
-                <img
+                <ColorRevealImage
                 src={s.image}
                 alt={s.title}
                 loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.4s] ease-luxe group-hover:scale-110" />
+                wrapperClassName="absolute inset-0 transition-transform duration-[1.4s] ease-luxe group-hover:scale-110"
+                className="w-full h-full object-cover" />
               
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/30 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-7">
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/30 to-transparent pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 p-7 pointer-events-none">
                   <h3 className="font-display text-2xl text-warmwhite">{s.title}</h3>
                   <p className="mt-2 text-sm font-sans font-light text-warmwhite/60 max-h-0 opacity-0 overflow-hidden group-hover:max-h-24 group-hover:opacity-100 transition-all duration-500 ease-luxe">
                     {s.short}

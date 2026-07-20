@@ -10,6 +10,7 @@ import React, { useMemo, useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { XIcon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 import { PageHero } from '../components/ui/PageHero';
+import { ColorRevealImage } from '../components/ui/ColorRevealImage';
 import { FinalCTA } from '../components/home/FinalCTA';
 import { GALLERY_IMAGES, GalleryImage, IMAGES } from '../data/images';
 
@@ -114,13 +115,14 @@ export function Portfolio() {
                 onClick={() => setLightbox(i)}
                 className="group relative mb-5 block w-full overflow-hidden">
                 
-                  <img
+                  <ColorRevealImage
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
-                  className="w-full object-cover transition-transform duration-[1.4s] ease-luxe group-hover:scale-110" />
+                  wrapperClassName="w-full transition-transform duration-[1.4s] ease-luxe group-hover:scale-110"
+                  className="w-full object-cover" />
                 
-                  <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/40 transition-colors duration-500 flex items-end p-5">
+                  <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/40 transition-colors duration-500 flex items-end p-5 pointer-events-none">
                     <span className="text-[10px] uppercase tracking-[0.24em] text-warmwhite opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
                       {img.alt}
                     </span>
